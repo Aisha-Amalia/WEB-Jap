@@ -1,0 +1,256 @@
+body {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("images/rur.jpg");
+  background-size: cover;
+}
+
+.nav {
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+  height: 2.5rem;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 0;
+  list-style-type: none;
+  z-index: 3;
+}
+
+.nav a {
+  color: black;
+  text-decoration: none;
+  height: 5.3rem;
+  width: 5.3rem;
+  background-color: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Home {
+  background-color: none;
+  height: 6.3rem;
+  width: 6.3rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Home:hover {
+  animation-name: moving;
+  animation-duration: 5s;
+  background-color: red;
+  height: 6.3rem;
+  width: 6.3rem;
+  border-radius: 50%;
+}
+
+.Buy {
+  background-color: none;
+  height: 6.3rem;
+  width: 6.3rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Buy:hover {
+  animation-name: moving;
+  animation-duration: 5s;
+  background-color: red;
+  height: 6.3rem;
+  width: 6.3rem;
+}
+
+.About {
+  background-color: none;
+  height: 6.3rem;
+  width: 6.3rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.About:hover {
+  animation-name: moving;
+  animation-duration: 5s;
+  background-color: red;
+  height: 6.3rem;
+  width: 6.3rem;
+  animation-timing-function: linear;
+  border-radius: 50%;
+}
+
+@keyframes moving {
+  0% {
+    /* transform: translateX(50px); */
+    background-color: rgb(255, 230, 0);
+
+    color: #fff;
+  }
+
+  25% {
+    transform: translateX(30px);
+  }
+
+  50% {
+    transform: translateX(50px);
+    font-size: 100%;
+  }
+
+  75% {
+    transform: translateX(30px);
+  }
+
+  100% {
+    transform: translateX(50px);
+  }
+}
+
+
+.button {
+  background-color: red;
+  height: 5.3rem;
+  width: 5.3rem;
+  position: absolute;
+  right: -93px;
+  bottom: 0;
+  border-radius: 50%;
+  border-color: red;
+  border-style: outnset;
+  perspective: 200px;
+  transition: all 2s;
+}
+
+.button:hover {
+  animation-name: moving2;
+  animation-duration: 3s;
+  -webkit-text-stroke: 0.9px black;
+  letter-spacing: 1px;
+  animation-timing-function: linear;
+  animation-iteration-count: 1;
+  cursor: pointer;
+}
+
+/* @keyframes moving2 {
+  0% {
+  }
+
+  50% {
+    transform: translateY(-500px);
+    font-size: 100%;
+  }
+
+  100% {
+    transform: translateY(-1000px);
+  }
+} */
+
+h1 {
+  width: 160px;
+  height: auto;
+  font-size: 2em;
+  transform: rotate(-90deg);
+}
+
+h1:hover {
+  animation: glow 1s ease-in-out infinite alternate;
+  -webkit-text-stroke: 1.3px black;
+  font-weight: bolder;
+  font-size: 32px;
+  color: #fff;
+  text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 40px #fdb52f, 0 0 80px #fdb52f,
+    0 0 120px #fdb52f, 0 0 160px red, 0 0 200px red;
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 40px #fdb52f,
+      0 0 80px #fdb52f, 0 0 120px #fdb52f, 0 0 140px red, 0 0 200px red;
+  }
+
+  to {
+    text-shadow: 0 0 20px #fff, 0 0 30px #fdb52f, 0 0 40px #fdb52f,
+      0 0 50px #fdb52f, 0 0 60px #ff3e58, 0 0 70px #ff3e58, 0 0 80px #ff3e58,
+      0 0 90px #ff3e58;
+  }
+}
+
+.bar1 {
+  left: 0;
+  top: 0;
+  width: 100px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-right: 2.5px solid rgb(182, 143, 16);
+  position: absolute;
+  z-index: 2;
+}
+
+.bar2 {
+  top: 0;
+  width: 100px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-right: 2.5px solid rgb(182, 143, 16);
+  position: absolute;
+  right: 5%;
+  z-index: 2;
+}
+
+.box {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 200px;
+  z-index: -2;
+}
+
+.image {
+  height: 150px;
+  width: 150px;
+  display: flex;
+  border-radius: 50%;
+}
+
+.content {
+  height: 50%;
+  width: 50%;
+  font-size: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.content:hover {
+  background-color: rgb(253, 251, 251);
+  border: 0.2rem outset rgb(245, 235, 235);
+  opacity: 0.7;
+}
+
+#footer {
+  bottom: 0;
+  width: 100%;
+  position: absolute;
+  background-color: black;
+  color: white;
+  text-align: center;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+#footer a {
+  color: white;
+  font-weight: lighter;
+}
